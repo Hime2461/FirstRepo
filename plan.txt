@@ -1,0 +1,59 @@
+** Press Ctrl+C to stop a process in terminal
+** Use >npm run mix for compiling a program and after making changes to the CSS files
+** Use >yarn dev to run the program
+
+A]  Directory strcuture:
+    to install yarn
+    >npm install --global yarn 
+    >yarn --version                     //check version
+    >yarn init                          //set package.json; set value for nothing other than description or name
+
+B]  Dependencies installed:
+    express
+    ejs
+    express-ejs-layouts
+
+    nodemon
+
+    to install packages                 
+    >yarn add express ejs express-ejs-layouts       //depencencies
+
+    to install dev dependencies
+    >yarn add nodemon -D                            //-D because it is a dev depencency
+
+C]  Create server:
+
+    to start the server
+    >yarn dev                                       //start server at localhost:3000
+
+D]  Git setup:
+
+    download from
+    https://git-scm.com/
+
+    to check if installed
+    >git --version
+
+    >git init                                       //creates an empty repository '.git' which is hidden
+
+    >git status                                     //shows available folders 
+
+    >git add .                                      //adds all files
+
+    >git commit -m 'type_your_message'              //completes storage in repository
+
+E]  Laravel Mix:    [DO NOT TRUST THIS SECTION, difficulties with it]
+
+    install laravel mix
+    >yarn add laravel-mix -D                        //-D for dev dependency
+
+    >yarn add touch-cli -g                          //add touch; NOT WORKING
+
+    >touch webpack.mix.js                           //NOT WORKING; gives blank webpack.mix.js file
+
+    ----webpack.mix.js was copied and pasted in the project
+
+    >npm run mix                                    //use to compile app.js from resource
+
+F]  Tailwind CSS:
+
