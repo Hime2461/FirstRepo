@@ -41,25 +41,63 @@
     </section>
 
     <section class="menu container mx-auto py-8">
-        <h1 class="text-xl font-bold mb-8">All dishes</h1>
+        <% var now = new Date();%>
+       <% var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];%>
+      <%  var day = days[ now.getDay() ]; %>
+        <h1 class="text-xl font-bold mb-8"> <%= day%></h1>
         <div class="grid grid-cols-4 col-gap-12 row-gap-16">
-            <div class="w-64">
-                <img class="h-40 mb-4 mx-auto" src="/img/food-item.png" alt="food-item">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">Paneer Tikka</h2>
-                    <span class="hostel py-1 px-4 rounded-full uppercase text-xs ">Hostel 1</span>
-                    <div class="flex items-center justify-around">
-                        <span class="font-bold text-lg">₹250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
-                            <span>+</span>
-                            <span class="ml-4"> Add</span>
-                        </button>
+
+
+            <% messes.forEach(function(mess){%>
+                <div class="w-64">
+                    <img class="h-40 mb-4 mx-auto" src="/img/<%=mess.image%>" alt="food-item">
+                    <div class="text-center">
+                        <h2 class="mb-4 text-lg"><%= mess.dish %></h2>
+                        <span class="hostel py-1 px-4 rounded-full uppercase text-xs "><%= mess.name %></span>
+                        <div class="flex items-center justify-around">
+                            <span class="font-bold text-lg"><%= mess.price%></span>
+                            <button  data-mess="<%=JSON.stringify(mess)%>" class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
+                                <span>+</span>
+                                <span class="ml-4"> Add</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
+           <% })%>
+            
         
 
-            <div class="w-64">
+            <!-- <div class="w-64">
+                <img class="h-40 mb-4 mx-auto" src="/img/food-item.png" alt="food-item">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">Paneer Tikka</h2>
+                    <span class="hostel py-1 px-4 rounded-full uppercase text-xs ">Hostel 1</span>
+                    <div class="flex items-center justify-around">
+                        <span class="font-bold text-lg">₹250</span>
+                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
+                            <span>+</span>
+                            <span class="ml-4"> Add</span>
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="w-64">
+                <img class="h-40 mb-4 mx-auto" src="/img/food-item.png" alt="food-item">
+                <div class="text-center">
+                    <h2 class="mb-4 text-lg">Paneer Tikka</h2>
+                    <span class="hostel py-1 px-4 rounded-full uppercase text-xs ">Hostel 1</span>
+                    <div class="flex items-center justify-around">
+                        <span class="font-bold text-lg">₹250</span>
+                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
+                            <span>+</span>
+                            <span class="ml-4"> Add</span>
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="w-64">
                 <img class="h-40 mb-4 mx-auto" src="/img/food-item.png" alt="food-item">
                 <div class="text-center">
                     <h2 class="mb-4 text-lg">Paneer Tikka</h2>
@@ -132,41 +170,11 @@
                         </button>
                     </div>
                 </div>
-            </div>
+           </div>-->
+         </div> 
 
-            <div class="w-64">
-                <img class="h-40 mb-4 mx-auto" src="/img/food-item.png" alt="food-item">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">Paneer Tikka</h2>
-                    <span class="hostel py-1 px-4 rounded-full uppercase text-xs ">Hostel 1</span>
-                    <div class="flex items-center justify-around">
-                        <span class="font-bold text-lg">₹250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
-                            <span>+</span>
-                            <span class="ml-4"> Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-64">
-                <img class="h-40 mb-4 mx-auto" src="/img/food-item.png" alt="food-item">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">Paneer Tikka</h2>
-                    <span class="hostel py-1 px-4 rounded-full uppercase text-xs ">Hostel 1</span>
-                    <div class="flex items-center justify-around">
-                        <span class="font-bold text-lg">₹250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
-                            <span>+</span>
-                            <span class="ml-4"> Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    <!--</section>
+    </section> 
 
     <script src="/js/app.js"></script>
 </body>
-</html>-->
+</html>

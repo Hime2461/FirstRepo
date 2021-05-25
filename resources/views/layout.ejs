@@ -11,6 +11,7 @@
     <!--<link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,600&display=swap" rel="stylesheet">-->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     
@@ -25,7 +26,10 @@
                 <li class="ml-6 text-lg"><a href="#">About Us</a></li>
                 <li class="ml-6 text-lg"><a href="/register">Register</a></li>
                 <li class="ml-6 text-lg"><a href="/login">Login</a></li>
-                <li class="ml-6 text-lg"><a href="#" class="inline-block px-4 py-2 rounded-full"><img src="/img/shopping_cart.png" alt="Cart"></a></li>
+                <li class="ml-6 text-lg"><a href="/cart" class=" px-2  bold">
+                    <span id="cartCounter" class="font-bold pd-2"><%=session.cart? session.cart.totquantity : ' '%></span>
+                    <!-- <img src="/img/shopping_cart.png" alt="Cart"></a></li> -->
+                    <i class="fas fa-cart-arrow-down"alt="Cart"></i></a></li>
             </ul>
         </div>
     </nav>

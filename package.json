@@ -1,11 +1,11 @@
 {
-  "name": "Mess",
+  "name": "mess",
   "version": "1.0.0",
   "description": "A website to view nearby Mess",
   "main": "index.js",
   "author": "Khana Khazana",
   "scripts": {
-    "serve": "node server.js",
+    "start": "node server.js",
     "dev": "nodemon server.js",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npm run development -- --watch",
@@ -14,11 +14,19 @@
   },
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.21.1",
+    "connect-mongo": "^4.4.1",
     "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
-    "touch-cli": "^0.0.1"
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.2",
+    "mongoose": "^5.12.10",
+    "noty": "^3.2.0-beta-deprecated",
+    "touch-cli": "^0.0.1",
+    "validator": "^13.6.0"
   },
   "devDependencies": {
     "laravel-mix": "^6.0.19",
