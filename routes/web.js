@@ -16,6 +16,8 @@ app.get('/login', auth_controller.login)
 
 app.get('/register', auth_controller.register)
 
+app.post('/register',auth_controller.postregister)
+
 app.post('/updatecart',cart_controller.update)
 
 

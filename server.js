@@ -18,6 +18,8 @@ const flash=require('express-flash')
 
 const MongoDbStore=require('connect-mongo')
 
+const passport=require('passport')
+
 //database connection
 const  url ='mongodb://localhost/mess';
 mongoose.connect(url,{useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology:true,useFindAndModify:true})
@@ -29,11 +31,9 @@ console.log("falied to connect")
 });
 
 const dbconnection=mongoose.connection;
-//to store session in db
-// let mongostore=new Mongodbstore({
-//     mongooseConnection:connection,
-//     collection:'sessions'
-// })
+
+
+//passport config -for lgin purpose
 
 
 
@@ -56,6 +56,8 @@ app.use(flash())
 
 //Assets
 app.use(express.static('public'))
+
+app.use(express.urlencoded({extended:false}))
 
 app.use(express.json())
 

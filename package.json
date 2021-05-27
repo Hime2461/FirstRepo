@@ -25,6 +25,8 @@
     "express-session": "^1.17.2",
     "mongoose": "^5.12.10",
     "noty": "^3.2.0-beta-deprecated",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "touch-cli": "^0.0.1",
     "validator": "^13.6.0"
   },

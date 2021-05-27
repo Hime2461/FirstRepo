@@ -1,4 +1,4 @@
-<!--<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,30 +30,29 @@
     <section class="hero py-16">
         <div class="container mx-auto flex items-center justify-between">
             <div class="w-1/2 padding text-center">
-                <h1 class="text-6xl pb-3">Hungry?</h1>
-                <h5 class="text-xl">Look at mess!</h5>
-                <button class="px-6 py-2 rounded-full text-whte font-bold mt-4 go-btn">Order Now!</button>
+                <h1  id="hungry"  class="text-8xl leading-relaxed">Hungry?</h1>
+                <h5  id="mess-text" class="text-4xl  text-white leading-relaxed">Look at mess!</h5>
+                <button class=" order px-6 py-2 leading-relaxed rounded-full text-whte text-xl mt-4 go-btn">Order  Now!</button>
             </div>
-            <div class="w-1/2">
-                <img src="/img/hungry.jpg" alt="food">
-            </div>
+            
         </div>
     </section>
 
-    <section class="menu container mx-auto py-8">
+    <section class="menu container mx-8 py-8">
         <% var now = new Date();%>
        <% var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];%>
       <%  var day = days[ now.getDay() ]; %>
-        <h1 class="text-xl font-bold mb-8"> <%= day%></h1>
+        <h1 class="day text-5xl font-bold mb-8 pb-8 text-center"> <%= day%></h1>
         <div class="grid grid-cols-4 col-gap-12 row-gap-16">
 
 
             <% messes.forEach(function(mess){%>
-                <div class="w-64">
+                <div class=" card w-64">
+                    <div class="parent">
                     <img class="h-40 mb-4 mx-auto" src="/img/<%=mess.image%>" alt="food-item">
-                    <div class="text-center">
-                        <h2 class="mb-4 text-lg"><%= mess.dish %></h2>
-                        <span class="hostel py-1 px-4 rounded-full uppercase text-xs "><%= mess.name %></span>
+                </div> <div class="text-center">
+                        <h2 class="mb-4 text-xl"><%= mess.dish %></h2>
+                        <span class="hostel py-1 px-4 rounded-full uppercase text-lg "><%= mess.name %></span>
                         <div class="flex items-center justify-around">
                             <span class="font-bold text-lg"><%= mess.price%></span>
                             <button  data-mess="<%=JSON.stringify(mess)%>" class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
@@ -67,110 +66,7 @@
             
         
 
-            <!-- <div class="w-64">
-                <img class="h-40 mb-4 mx-auto" src="/img/food-item.png" alt="food-item">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">Paneer Tikka</h2>
-                    <span class="hostel py-1 px-4 rounded-full uppercase text-xs ">Hostel 1</span>
-                    <div class="flex items-center justify-around">
-                        <span class="font-bold text-lg">₹250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
-                            <span>+</span>
-                            <span class="ml-4"> Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="w-64">
-                <img class="h-40 mb-4 mx-auto" src="/img/food-item.png" alt="food-item">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">Paneer Tikka</h2>
-                    <span class="hostel py-1 px-4 rounded-full uppercase text-xs ">Hostel 1</span>
-                    <div class="flex items-center justify-around">
-                        <span class="font-bold text-lg">₹250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
-                            <span>+</span>
-                            <span class="ml-4"> Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- <div class="w-64">
-                <img class="h-40 mb-4 mx-auto" src="/img/food-item.png" alt="food-item">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">Paneer Tikka</h2>
-                    <span class="hostel py-1 px-4 rounded-full uppercase text-xs ">Hostel 1</span>
-                    <div class="flex items-center justify-around">
-                        <span class="font-bold text-lg">₹250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
-                            <span>+</span>
-                            <span class="ml-4"> Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-64">
-                <img class="h-40 mb-4 mx-auto" src="/img/food-item.png" alt="food-item">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">Paneer Tikka</h2>
-                    <span class="hostel py-1 px-4 rounded-full uppercase text-xs ">Hostel 1</span>
-                    <div class="flex items-center justify-around">
-                        <span class="font-bold text-lg">₹250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
-                            <span>+</span>
-                            <span class="ml-4"> Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-64">
-                <img class="h-40 mb-4 mx-auto" src="/img/food-item.png" alt="food-item">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">Paneer Tikka</h2>
-                    <span class="hostel py-1 px-4 rounded-full uppercase text-xs ">Hostel 1</span>
-                    <div class="flex items-center justify-around">
-                        <span class="font-bold text-lg">₹250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
-                            <span>+</span>
-                            <span class="ml-4"> Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-64">
-                <img class="h-40 mb-4 mx-auto" src="/img/food-item.png" alt="food-item">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">Paneer Tikka</h2>
-                    <span class="hostel py-1 px-4 rounded-full uppercase text-xs ">Hostel 1</span>
-                    <div class="flex items-center justify-around">
-                        <span class="font-bold text-lg">₹250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
-                            <span>+</span>
-                            <span class="ml-4"> Add</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-64">
-                <img class="h-40 mb-4 mx-auto" src="/img/food-item.png" alt="food-item">
-                <div class="text-center">
-                    <h2 class="mb-4 text-lg">Paneer Tikka</h2>
-                    <span class="hostel py-1 px-4 rounded-full uppercase text-xs ">Hostel 1</span>
-                    <div class="flex items-center justify-around">
-                        <span class="font-bold text-lg">₹250</span>
-                        <button class="add-to-cart py-1 px-6 rounded-full flex items-center font-bold my-6">
-                            <span>+</span>
-                            <span class="ml-4"> Add</span>
-                        </button>
-                    </div>
-                </div>
-           </div>-->
+            
          </div> 
 
     </section> 

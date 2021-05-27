@@ -1857,14 +1857,14 @@ function updatecart(data) {
     cartcounter.innerHTML = res.data.totqty;
     new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
       type: 'success',
-      text: "Item added",
+      text: "Item added!!",
       timeout: 0.5 * 1000,
       progressBar: false
     }).show(); // alert("data added")
   })["catch"](function (e) {
     new (noty__WEBPACK_IMPORTED_MODULE_1___default())({
       type: 'error',
-      text: "failed",
+      text: "Error!!",
       timeout: 0.5 * 1000,
       progressBar: false
     }).show();

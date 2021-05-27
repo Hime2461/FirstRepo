@@ -11,22 +11,24 @@
     <!--<link href="https://fonts.googleapis.com/css2?family=KoHo:ital,wght@1,600&display=swap" rel="stylesheet">-->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     
-    <nav class="container mx-auto flex items-center justify-between py-4">
+    <nav class="cont mx-auto flex items-center justify-between py-4">
         <div class="flex items-center">
-            <img class="object-scale-down" src="/img/logo.png"  alt="logo">
-            <h1 class="ml-4 text-2xl">Khana Khazana</h1>
+            <img class="object-scale-down ml-8" src="/img/logo.png"  alt="logo">
+            <h1 class="ml-4 font-bold text-2xl">Khana Khazana</h1>
         </div>
         <div> 
             <ul class="flex items-center" class="ml-6">
-                <li class="ml-6 text-lg"><a href="/">Home</a></li>
-                <li class="ml-6 text-lg"><a href="#">About Us</a></li>
-                <li class="ml-6 text-lg"><a href="/register">Register</a></li>
-                <li class="ml-6 text-lg"><a href="/login">Login</a></li>
-                <li class="ml-6 text-lg"><a href="/cart" class=" px-2  bold">
+                <li class="mx-6 text-xl "><a href="/">Home</a></li>
+                <li class="mx-6 text-xl "><a href="/register">Register</a></li>
+                <li class="mx-6 text-xl "><a href="/login">Login</a></li>
+                <li class="mx-6 text-xl "><a href="/cart" class=" px-2  bold">
                     <span id="cartCounter" class="font-bold pd-2"><%=session.cart? session.cart.totquantity : ' '%></span>
                     <!-- <img src="/img/shopping_cart.png" alt="Cart"></a></li> -->
                     <i class="fas fa-cart-arrow-down"alt="Cart"></i></a></li>
