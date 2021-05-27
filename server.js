@@ -20,6 +20,9 @@ const MongoDbStore=require('connect-mongo')
 
 const passport=require('passport')
 
+const bodyParser=require('body-parser')
+
+
 //database connection
 const  url ='mongodb://localhost/mess';
 mongoose.connect(url,{useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology:true,useFindAndModify:true})
@@ -34,7 +37,11 @@ const dbconnection=mongoose.connection;
 
 
 //passport config -for lgin purpose
+const passportinit=require('./app/config/passport')
 
+passportinit(passport)
+app.use(passport.initialize())
+app.use(passport.session())
 
 
 //session config --express middleware
@@ -57,7 +64,10 @@ app.use(flash())
 //Assets
 app.use(express.static('public'))
 
+app.use(express.json())
 app.use(express.urlencoded({extended:false}))
+// app.use(bodyParser.json())
+// app.use(bodyParser.urlencoded({extended:true}))
 
 app.use(express.json())
 

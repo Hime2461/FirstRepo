@@ -1,5 +1,5 @@
 const User = require('../../models/user')
-// const user = require('../../models/user')
+
 
 
 function auth_controller() {
@@ -26,6 +26,7 @@ function auth_controller() {
             }
         },
         postregister(req, res) {
+            console.log(req)
             const { name, email, password } = req.body
             //validate request
             if (!name || !email || !password) {
@@ -63,8 +64,21 @@ function auth_controller() {
                 return res.redirect('/register')
             })
 
-        }
+        },
+        passportinit(req, res) {
+            const { email, password } = req.body
+            User.exists({ email: email, password: password }, (err, result) => {
+                if (result) {
+                    return res.redirect('/')
+                }
+                req.flash('error', 'Incorrect password or email')
+                    req.flash('password', password)
+                    req.flash('email', email)
+                    return res.redirect('/login')
 
+            })
+
+        }
     }
-}
-module.exports = auth_controller;
+    }
+    module.exports = auth_controller;
