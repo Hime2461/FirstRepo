@@ -19,11 +19,6 @@ app.post('/cart', cart_controller.order)
 app.get('/login', auth_controller.login)
 
  app.post('/login',auth_controller.passportinit)
-// app.post('/login',
-//   passport.authenticate('local', { successRedirect: '/',
-//                                    failureRedirect: '/login',
-//                                    failureFlash: true })
-// );
 
 app.get('/register', auth_controller.register)
 
