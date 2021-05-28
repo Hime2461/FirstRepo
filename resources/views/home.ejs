@@ -26,6 +26,7 @@
             </ul>
         </div>
     </nav>-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
     <section class="hero py-16">
         <div class="container mx-auto flex items-center justify-between">
@@ -51,7 +52,7 @@
                     <div class="parent">
                     <img class="h-40 mb-4 mx-auto" src="/img/<%=mess.image%>" alt="food-item">
                 </div> <div class="text-center">
-                        <h2 class="mb-4 text-xl"><%= mess.dish %></h2>
+                        <h2 class="mb-4 text-xl"><%= mess.dish %> & Chapati</h2>
                         <span class="hostel py-1 px-4 rounded-full uppercase text-lg "><%= mess.name %></span>
                         <div class="flex items-center justify-around">
                             <span class="font-bold text-lg"><%= mess.price%></span>
@@ -70,6 +71,32 @@
          </div> 
 
     </section> 
+
+    <!-- about us page -->
+    <section class="pb-4" id="about">
+        <section id="social-icons">
+            <a href="#"><i class="fab fa-facebook facebook"></i> </a>
+            <a href="#"><i class="fab fa-twitter twitter"> </i> </a>
+            <a href="#"><i class="fab fa-instagram instagram "></i> </a>
+            <a href="#"><i class="fab fa-google -plus plus"></i> </a>
+          </section>
+        <div class="heading text-center">
+            <h1>our <span> special</span></h1>
+        </div>
+        <div class="row min-vh-100" >
+            <div class="col-md-6 text-center text-md-left align-self-center content ">
+                
+                <p>Food's a lot better when you are more hungry and someone already has prepared it for you !!!<br>
+                    If you are looking for hot, sizzling, sweet, spicy dishes which would be made from your locality and served hot, Khana Khazana is the right place for you.<br>
+                    
+                    This website hosts all kinds of dishes present around your locality thereby maintaining your trust not only with us, but also with shops that you love. We make it possible to get you your favouriate dishes right at your doorstep from local hotels and restaurants - all under the same hood.<br>
+                    
+                    Just set up your profile, select your location and you are good to go for your favouriate dish - served hot. Obviously.</p>
+                    <a href="/"><button class="mt-4"> learn more</button></a>
+                </div>
+            </div>
+    </section>
+
 
     <script src="/js/app.js"></script>
 </body>

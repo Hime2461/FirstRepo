@@ -64,7 +64,8 @@ function auth_controller() {
                 return res.redirect('/register')
             })
 
-        },
+        }
+        ,
         passportinit(req, res) {
             const { email, password } = req.body
             User.exists({ email: email, password: password }, (err, result) => {

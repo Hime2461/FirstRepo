@@ -31,8 +31,8 @@
 
 // }
 
-function passportinit(req,res){
-  console.log(req.body)
+// function passportinit(req,res){
+//   console.log(req.body)
   // const {email, password } = req.body
 //   User.exists({ email: email ,password:password}, (err, result) => {
 //     if (result) {
@@ -42,6 +42,23 @@ function passportinit(req,res){
 //         return res.redirect('/')
 //     }
 // })
-}
+//}
 
-module.exports = passportinit
+
+// function passportinit(req, res) {
+//   const { email, password } = req.body
+//   User.exists({ email: email, password: password }, (err, result) => {
+//       if (result) {
+//         console.log(result)
+//           return res.redirect('/')
+//       }
+//       req.flash('error', 'Incorrect password or email')
+//           req.flash('password', password)
+//           req.flash('email', email)
+//           return res.redirect('/login')
+
+//   })
+
+// }
+
+//module.exports = passportinit

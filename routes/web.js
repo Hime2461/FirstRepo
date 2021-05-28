@@ -14,6 +14,8 @@ app.get('/',home_controller.index)
 
 app.get('/cart', cart_controller.index)
 
+app.post('/cart', cart_controller.order)
+
 app.get('/login', auth_controller.login)
 
  app.post('/login',auth_controller.passportinit)

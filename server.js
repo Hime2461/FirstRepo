@@ -18,7 +18,7 @@ const flash=require('express-flash')
 
 const MongoDbStore=require('connect-mongo')
 
-const passport=require('passport')
+//const passport=require('passport')
 
 const bodyParser=require('body-parser')
 
@@ -37,11 +37,11 @@ const dbconnection=mongoose.connection;
 
 
 //passport config -for lgin purpose
-const passportinit=require('./app/config/passport')
+//const passportinit=require('./app/config/passport')
 
-passportinit(passport)
-app.use(passport.initialize())
-app.use(passport.session())
+//passportinit(passport)
+// app.use(passport.initialize())
+// app.use(passport.session())
 
 
 //session config --express middleware

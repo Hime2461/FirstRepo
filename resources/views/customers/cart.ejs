@@ -27,11 +27,11 @@
                 <span class="amount text-2xl font-bold ml-2"> ₹<%=session.cart.totprice %></span>
             </div>
             <div>
-                <form action="" class="mt-12">
-                    <input class="bprder border-gray-400 p-2 w-1/2 mb-4" type="text" placeholder="Phone Number">
-                    <input class="bprder border-gray-400 p-2 w-1/2 mb-4" type="text" placeholder="Address">
+                <form action="/cart" method="POST" class="mt-12">
+                    <input name="number" class="bprder border-gray-400 p-2 w-1/2 mb-4" type="number" placeholder="Phone Number" required>
+                    <input name="address" class="bprder border-gray-400 p-2 w-1/2 mb-4" type="text" placeholder="Address" required>
                     <div>
-                        <button class="go-btn px-6 py-2 rounded-full text-white font-bold mt-6" type="submit">Order now</button>
+                        <button  class="go-btn px-6 py-2 rounded-full text-white font-bold mt-6" type="submit">Order now</button>
                     </div>
                 </form>
             </div>
