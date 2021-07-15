@@ -10,7 +10,6 @@ function home_controller(){
     index ( req,res) {
         try{
            const mess= Menu.find().then(function(mess){
-                console.log(mess[2])
                return res.render('home',{messes:mess})
             })
           

@@ -100,7 +100,7 @@ function cart_controller() {
                 var send = require('gmail-send')({
                     // var send = require('../index.js')({
                     user: 'vaishnavidhakare05@gmail.com',
-                    pass: 'anju@2000',
+                    pass: 'Anju@2000',
                     to: custemail,
                     subject: 'Orders',
                     text: msg,
@@ -113,13 +113,14 @@ function cart_controller() {
               
 
                 const result = send() // Using default parameters
-                    .then((res) => {
+                    .then((result) => {
                         console.log("success")
+                       return  res.redirect('/')
                       
                     })
                     .catch((error) => {
-                        res.redirect('/cart')
-                      
+                        console.log('fail',error)
+                     return  res.redirct('/cart')
                     })
                     ;
 

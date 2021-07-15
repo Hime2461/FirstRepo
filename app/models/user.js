@@ -18,6 +18,8 @@ const Schema=mongoose.Schema({
     },
     password:{
        type:String,
+       minlength:8,
+       maxlength:20,
         required:true
     },
     role:{

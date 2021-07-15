@@ -9,7 +9,8 @@ const passportinit=require('../app/config/passport')
 
 function Routes(app){
     //root routing
-app.get('/',home_controller.index)
+ app.get('/',home_controller.index)
+
 
 
 app.get('/cart', cart_controller.index)
